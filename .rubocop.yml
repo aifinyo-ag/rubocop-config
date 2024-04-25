@@ -1,6 +1,45 @@
 ---
 # shared configuration of rubocop
 
-# currently only for testing purposes
-Bundler/DuplicatedGem:
-  Enabled: false
+require:
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-minitest
+
+# Shared config for all projects regarding all cops
+AllCops:
+  DisplayCopNames: true
+  Exclude:
+    - bin/**/*
+    - exe/**/*
+    - tmp/**/*
+    - public/**/*
+    - vendor/**/*
+    - node_modules/**/*
+    - db/schema.rb
+    # Evaluate github config to exclude all ignored files and folders from rubocop checks that are ignored by git
+    # The indentation is to not show the error "Invalid child element in a block sequence" in the editor (by yaml).
+    # Since this file is pre-processed by ERB, the indentation is not visible in the final file.
+    # See: https://docs.rubocop.org/rubocop/configuration.html#pre-processing
+      <%- `git status --ignored --porcelain`.lines.grep(/^!! /).each do |path| -%>
+    - <%= path.sub(/^!! /, '').sub(/\/$/, '/**/*') %>
+      <%- end -%>
+  NewCops: enable
+  TargetRailsVersion: 7.0
+  TargetRubyVersion: 3.0
+  UseCache: false
+
+# Shared config for specific cops
+
+# Per team discussion from 14.03.2024 we decided to prefer and enforce the use of 'referrer' over 'referer'
+Rails/RequestReferer:
+  Enabled: true
+  EnforcedStyle: referrer
+
+Rails/UnknownEnv:
+  Enabled: true
+  Environments:
+    - development
+    - test
+    - staging
+    - production
