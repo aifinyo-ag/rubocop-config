@@ -43,3 +43,23 @@ Rails/UnknownEnv:
     - test
     - staging
     - production
+
+# For better readability we don't want multiline statements for Arrays and HereDoc to count towards the line count
+# https://docs.rubocop.org/rubocop/cops_metrics.html#metricsmodulelength
+Metrics/ModuleLength: &line_count_metrics
+  CountAsOne:
+    - array
+    - heredoc
+  CountComments: false
+
+# https://docs.rubocop.org/rubocop/cops_metrics.html#metricsclasslength
+Metrics/ClassLength:
+  <<: *line_count_metrics
+
+# https://docs.rubocop.org/rubocop/cops_metrics.html#metricsmethodlength
+Metrics/MethodLength:
+  <<: *line_count_metrics
+
+# https://docs.rubocop.org/rubocop/cops_metrics.html#metricsblocklength
+Metrics/BlockLength:
+  <<: *line_count_metrics
