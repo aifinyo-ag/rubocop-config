@@ -1,6 +1,0 @@
----
-# shared configuration of rubocop
-
-# currently only for testing purposes
-Bundler/DuplicatedGem:
-  Enabled: false
