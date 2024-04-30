@@ -49,6 +49,7 @@ Rails/UnknownEnv:
 Metrics/ModuleLength: &line_count_metrics
   CountAsOne:
     - array
+    - hash
     - heredoc
   CountComments: false
 
