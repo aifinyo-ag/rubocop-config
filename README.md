@@ -38,7 +38,7 @@ Make sure you add the following line to your .gitignore file:
 ```
 # ignore remote rubocop config - rubocop handles this itself
 # see https://docs.rubocop.org/rubocop/configuration.html#inheriting-configuration-from-a-remote-url
-.rubocop-https---raw-githubusercontent-com-aifinyo-ag-rubocop-config-main--rubocop-ruby3-rails7-yml
+.rubocop-https---raw-githubusercontent-com-aifinyo-ag-rubocop-config-main--rubocop-*
 ```
 
 Using rubocop with a remote config will make sure that you always use the most up-to-date version of the config.
