@@ -21,9 +21,9 @@ AllCops:
     # The indentation is to not show the error "Invalid child element in a block sequence" in the editor (by yaml check).
     # Since this file is pre-processed by ERB, the indentation is not visible in the final file.
     # See: https://docs.rubocop.org/rubocop/configuration.html#pre-processing
-      <%- `git status --ignored --porcelain`.lines.grep(/^!! /).each do |path| -%>
+      <% `git status --ignored --porcelain`.lines.grep(/^!! /).each do |path| %>
     - <%= path.sub(/^!! /, '').sub(/\/$/, '/**/*') %>
-      <%- end -%>
+      <% end %>
   NewCops: enable
   TargetRailsVersion: 7.0
   TargetRubyVersion: 3.0
