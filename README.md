@@ -3,6 +3,9 @@ Central rubocop config to be shared among Rails applications
 
 ## Installation
 
+> [!NOTE]
+> There is a new [AifinyoUtils](https://github.com/aifinyo-ag/aifinyo_utils) gem that will take care of the rubocop configuration. Please use that instead of directly using this repository.
+
 ### Gemfile
 
 Add these Gems to your application's Gemfile into the group `development` and `test`:
@@ -25,11 +28,10 @@ Add this line to your application's .rubocop.yml:
 ```yaml
   inherit_from:
     # use the most up-to-date version of this config
-    - https://raw.githubusercontent.com/aifinyo-ag/rubocop-config/main/.rubocop.ruby3-rails7.yml
+    - https://raw.githubusercontent.com/aifinyo-ag/rubocop-config/main/.rubocop.yml
 ```
 
-There are configs available for different types of projects. You can use them by adding the corresponding line to your .rubocop.yml.
-Each combination of ruby and rails versions that we use and support has its own file in the repository.
+This config relies on the automatic version detection of rubocop.
 
 ### .gitignore
 
