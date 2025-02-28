@@ -23,6 +23,9 @@ end
 
 ### .rubocop.yml
 
+> [!CAUTION]
+> This config only works from rubocop version 1.72 and up.
+
 Add this line to your application's .rubocop.yml:
 
 ```yaml
