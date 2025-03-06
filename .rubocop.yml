@@ -72,3 +72,10 @@ Layout/LineLength:
   # allow lines longer than 120 (by default) characters if they are comment lines
   # this is mainly for schema comments from annotate gem
   AllowedPatterns: ['(\A|\s)#']
+
+# https://docs.rubocop.org/rubocop/cops_style.html#styledocumentation
+Style/Documentation:
+  Enabled: true
+  Exclude:
+    # no need to class document migrations
+    - db/migrate/**/*.rb
