@@ -64,8 +64,7 @@ Metrics/BlockLength:
   <<: *line_count_metrics
   # Allow large blocks in routes
   Exclude:
-    - config/routes/*_routes.rb
-    - config/routes.rb
+    - config/**/*.rb
 
 # https://docs.rubocop.org/rubocop/cops_layout.html#layoutlinelength
 Layout/LineLength:
