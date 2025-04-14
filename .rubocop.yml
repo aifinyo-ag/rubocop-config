@@ -78,3 +78,4 @@ Style/Documentation:
   Exclude:
     # no need to class document migrations
     - db/migrate/**/*.rb
+    - test/**/*.rb
