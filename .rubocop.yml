@@ -63,7 +63,7 @@ Metrics/AbcSize:
 # https://docs.rubocop.org/rubocop/cops_metrics.html#metricsblocklength
 Metrics/BlockLength:
   <<: *line_count_metrics
-  # Allow large blocks in routes
+  # Allow large blocks in configs (environments, initializers, routes, etc)
   Exclude:
     - config/**/*.rb
     - test/**/*.rb
@@ -82,7 +82,8 @@ Metrics/MethodLength:
 # Rails cops
 # =============================================================================
 
-# Enforces I18n for hard-coded strings in flash messages, redirects, etc.
+# Following a team discussion on 27 January 2025, we decided to enforce I18n for hard-coded strings in flash messages, redirects, etc.
+# https://docs.rubocop.org/rubocop-rails/cops_rails.html#railsi18nlocaletexts
 Rails/I18nLocaleTexts:
   Enabled: true
   Exclude:
@@ -117,12 +118,12 @@ Style/Documentation:
     - db/migrate/**/*.rb
     - test/**/*.rb
 
-# Enforces shorthand syntax { name: } instead of { name: name } (Ruby 3.1+).
+# Following a team discussion on 27 January 2025, we decided to enforce shorthand syntax { name: } instead of { name: name } (Ruby 3.1+).
 # https://docs.rubocop.org/rubocop/cops_style.html#stylehashsyntax
 Style/HashSyntax:
   EnforcedShorthandSyntax: always
 
-# Enforces parentheses for all method calls with arguments for better readability and less parsing ambiguity.
+# Following a team discussion on 27 January 2025, we decided to enforce parentheses for all method calls with arguments for better readability and less parsing ambiguity.
 # https://docs.rubocop.org/rubocop/cops_style.html#stylemethodcallwithargsparentheses
 Style/MethodCallWithArgsParentheses:
   Enabled: true
