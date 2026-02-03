@@ -82,7 +82,7 @@ Metrics/MethodLength:
 # Rails cops
 # =============================================================================
 
-# Following a team discussion on 27 January 2025, we decided to enforce I18n for hard-coded strings in flash messages, redirects, etc.
+# Following a team discussion on 27 January 2026, we decided to enforce I18n for hard-coded strings in flash messages, redirects, etc.
 # https://docs.rubocop.org/rubocop-rails/cops_rails.html#railsi18nlocaletexts
 Rails/I18nLocaleTexts:
   Enabled: true
