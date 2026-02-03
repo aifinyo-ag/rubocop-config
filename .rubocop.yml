@@ -123,7 +123,7 @@ Style/Documentation:
 Style/HashSyntax:
   EnforcedShorthandSyntax: always
 
-# Following a team discussion on 27 January 2025, we decided to enforce parentheses for all method calls with arguments for better readability and less parsing ambiguity.
+# Following a team discussion on 27 January 2026, we decided to enforce parentheses for all method calls with arguments for better readability and less parsing ambiguity.
 # https://docs.rubocop.org/rubocop/cops_style.html#stylemethodcallwithargsparentheses
 Style/MethodCallWithArgsParentheses:
   Enabled: true
