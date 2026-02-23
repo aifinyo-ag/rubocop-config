@@ -30,7 +30,7 @@ AllCops:
       # Since this file is pre-processed by ERB, the indentation is not visible in the final file.
       # See: https://docs.rubocop.org/rubocop/configuration.html#pre-processing
       <% `git status --ignored --porcelain`.lines.grep(/^!! /).each do |path| %>
-    - "<%= "**/" + path.sub(/^!! /, '').sub(/\/$/, '/**/*') %>"
+    - "<%= '**/' + path.sub(/^!! /, '').sub(/\/$/, '/**/*') %>"
       <% end %>
   NewCops: enable
   UseCache: false
