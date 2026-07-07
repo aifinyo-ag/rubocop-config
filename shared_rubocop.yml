@@ -63,6 +63,7 @@ Metrics/ModuleLength: &line_count_metrics
     - heredoc
   CountComments: false
   Exclude:
+    - db/migrate/**/*.rb
     - test/**/*.rb
     - spec/**/*.rb
 
@@ -77,6 +78,7 @@ Metrics/BlockLength:
   # Allow large blocks in configs (environments, initializers, routes, etc)
   Exclude:
     - config/**/*.rb
+    - db/migrate/**/*.rb
     - test/**/*.rb
     - spec/**/*.rb
 
