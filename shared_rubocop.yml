@@ -107,10 +107,12 @@ Rails/RequestReferer:
   Enabled: true
   EnforcedStyle: referrer
 
+# Following a team discussion on 13 August 2026, we decided to exclude test files from this cop.
 # In tests it is often necessary to create states that are normally only reachable after
 # several process steps, or that the seed data simply does not cover. Skipping validations
 # (update_column, touch, etc.) is the pragmatic way to set up such states, so this cop
 # only applies to application code.
+# https://aifinyo.slack.com/archives/CQB9NAK0W/p1786596136446759
 # https://docs.rubocop.org/rubocop-rails/cops_rails.html#railsskipsmodelvalidations
 Rails/SkipsModelValidations:
   Exclude:
